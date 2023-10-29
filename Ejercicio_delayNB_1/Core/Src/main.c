@@ -104,7 +104,7 @@ int main(void)
   MX_USB_OTG_FS_PCD_Init();
   /* USER CODE BEGIN 2 */
   // Tengo un arreglo de tiempos de patron, y otro de la cantidad de veces que se repiten
-  tick_t tiempos[] = {1000, 200, 100};
+  tick_t tiempos[] = {500, 100, 50};
   uint8_t repeticiones[] = {10, 10, 10};
   // Contador e indice, para saber cuantas veces repeti, y que tiempo estoy repitiendo
   uint8_t contador = 0;
