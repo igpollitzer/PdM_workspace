@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (9-2020-q2-update)
+# Toolchain: GNU Tools for STM32 (11.3.rel1)
 ################################################################################
 
 ELF_SRCS := 
@@ -9,22 +9,20 @@ S_SRCS :=
 C_SRCS := 
 S_UPPER_SRCS := 
 O_SRCS := 
+CYCLO_FILES := 
 SIZE_OUTPUT := 
 OBJDUMP_LIST := 
+SU_FILES := 
 EXECUTABLES := 
 OBJS := 
+MAP_FILES := 
 S_DEPS := 
 S_UPPER_DEPS := 
 C_DEPS := 
-OBJCOPY_BIN := 
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-Drivers/BSP/STM32F4xx_Nucleo_144 \
-Drivers/CMSIS \
-Drivers/Core/Src \
-Drivers/STM32F4xx_HAL_Driver/Src/Legacy \
+Core/Src \
+Core/Startup \
 Drivers/STM32F4xx_HAL_Driver/Src \
-Src \
-Startup \
 
