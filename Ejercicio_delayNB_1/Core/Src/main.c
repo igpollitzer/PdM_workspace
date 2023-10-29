@@ -104,8 +104,8 @@ int main(void)
   MX_USB_OTG_FS_PCD_Init();
   /* USER CODE BEGIN 2 */
   // Tengo un arreglo de tiempos de patron, y otro de la cantidad de veces que se repiten
-  tick_t tiempos[] = {500, 100, 50};
-  uint8_t repeticiones[] = {10, 10, 10};
+  tick_t tiempos[] = {1000, 200, 100};
+  uint8_t repeticiones[] = {5, 5, 5};
   // Contador e indice, para saber cuantas veces repeti, y que tiempo estoy repitiendo
   uint8_t contador = 0;
   uint8_t indice = 0;
@@ -113,8 +113,8 @@ int main(void)
   delay_t timer = {.startTime = 0,
                    .duration = 0,
                    .running = false};
-
-  delayInit(&timer,tiempos[indice]);
+  //Como tengo un duty cycle de 50%, hago un corrimiento del tiempo para que conmute cada medio tiempo
+  delayInit(&timer,tiempos[indice]>>1);
 
   /* USER CODE END 2 */
 
@@ -128,15 +128,17 @@ int main(void)
 	    if (delayRead(&timer)){
 	        HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
 	        contador++;
-	        // Cada indice repeticiones del toggle, corremos el indice y cambiamos la duracion
-	        if (contador == repeticiones[indice]){
+	        // Cada indice repeticiones del toggle, corremos el indice y cambiamos la duracion.
+	        // Para corregir la division del tiempo hago el corrimiento inverso, con las repeticiones
+	        if (contador == repeticiones[indice]<<1){
 	        	contador = 0;
 	        	indice++;
 	        	// El largo del array de repeticiones es 3. Cuando haya pasado por los 3 valores, vuelve a empezar
 	        	if (indice == 3){
 	        		indice = 0;
 	        	}
-	        	delayWrite(&timer, tiempos[indice]);
+	        	//Como tengo un duty cycle de 50%, hago un corrimiento del tiempo para que conmute cada medio tiempo
+	        	delayWrite(&timer, tiempos[indice]>>1);
 	        }
 	    }
   }
