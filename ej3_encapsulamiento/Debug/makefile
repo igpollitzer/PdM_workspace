@@ -10,6 +10,7 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk
+-include Drivers/API/Src/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
 -include objects.mk
@@ -34,34 +35,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := ej1_non_blocking_delay
+BUILD_ARTIFACT_NAME := ej3_encapsulamiento
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-ej1_non_blocking_delay.elf \
+ej3_encapsulamiento.elf \
 
 MAP_FILES += \
-ej1_non_blocking_delay.map \
+ej3_encapsulamiento.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-ej1_non_blocking_delay.list \
+ej3_encapsulamiento.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: ej1_non_blocking_delay.elf secondary-outputs
+main-build: ej3_encapsulamiento.elf secondary-outputs
 
 # Tool invocations
-ej1_non_blocking_delay.elf ej1_non_blocking_delay.map: $(OBJS) $(USER_OBJS) C:\Users\igpollitzer\STM32CubeIDE\workspace_1.13.2\ej1_non_blocking_delay\STM32F439ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "ej1_non_blocking_delay.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\igpollitzer\STM32CubeIDE\workspace_1.13.2\ej1_non_blocking_delay\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ej1_non_blocking_delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+ej3_encapsulamiento.elf ej3_encapsulamiento.map: $(OBJS) $(USER_OBJS) C:\Users\igpollitzer\STM32CubeIDE\workspace_1.13.2\ej3_encapsulamiento\STM32F439ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "ej3_encapsulamiento.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\igpollitzer\STM32CubeIDE\workspace_1.13.2\ej3_encapsulamiento\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ej3_encapsulamiento.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -70,14 +71,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-ej1_non_blocking_delay.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "ej1_non_blocking_delay.list"
+ej3_encapsulamiento.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "ej3_encapsulamiento.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) default.size.stdout ej1_non_blocking_delay.elf ej1_non_blocking_delay.list ej1_non_blocking_delay.map
+	-$(RM) default.size.stdout ej3_encapsulamiento.elf ej3_encapsulamiento.list ej3_encapsulamiento.map
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)

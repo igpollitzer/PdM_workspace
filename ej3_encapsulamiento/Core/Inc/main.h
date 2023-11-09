@@ -31,8 +31,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <stdint.h>
-#include <stdbool.h>
+
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -110,16 +109,7 @@ void Error_Handler(void);
 #define LD2_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
-typedef uint32_t tick_t;
-typedef bool bool_t;
-typedef struct{
-   tick_t startTime;
-   tick_t duration;
-   bool_t running;
-} delay_t;
-void delayInit( delay_t * delay, tick_t duration );
-bool_t delayRead( delay_t * delay );
-void delayWrite( delay_t * delay, tick_t duration );
+
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

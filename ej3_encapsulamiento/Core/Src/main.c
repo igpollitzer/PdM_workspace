@@ -22,7 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "API_delay.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -363,27 +363,7 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-void delayInit( delay_t * delay, tick_t duration ){
-    delay->duration = duration;
-    delay->running = false;
-}
 
-bool_t delayRead( delay_t * delay ){
-	if (delay->running == false){
-		delay->startTime = HAL_GetTick();
-		delay->running = true;
-	}else{
-		// Calculo si paso el tiempo del delay
-		if (HAL_GetTick() - delay->startTime > delay->duration){
-			delay->running = false;
-			return true;
-		}
-	}
-	return false;
-}
-void delayWrite( delay_t * delay, tick_t duration ){
-	delay->duration = duration;
-}
 /* USER CODE END 4 */
 
 /**
