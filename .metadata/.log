@@ -2726,3 +2726,21 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-11-06 03:45:37.429
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-11-09 02:56:52.473 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-11-09 02:57:19.653
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-11-09 02:57:19.655
+!MESSAGE Log4j2 initialized with config file /home/igpollitzer/repos/PdM_workspace/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-11-09 02:57:44.519
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-09 02:58:59.311
+!MESSAGE Indexed 'ej3_encapsulamiento' (27 sources, 119 headers) in 9.07 sec: 11,496 declarations; 51,276 references; 3 unresolved inclusions; 42 syntax errors; 147 unresolved names (0.23%)
