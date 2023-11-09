@@ -2684,3 +2684,45 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-10-26 21:16:06.447
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-11-06 03:32:36.537 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-11-06 03:33:31.446
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-11-06 03:33:31.465
+!MESSAGE Log4j2 initialized with config file /home/igpollitzer/repos/PdM_workspace/.metadata/.log4j2.xml
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-11-06 03:33:39.491
+!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.search.SearchResultView" id and the "Classic Search" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-11-06 03:33:56.014
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-06 03:37:00.320
+!MESSAGE Indexed 'Ej1_pushButton' (99 sources, 208 headers) in 32.3 sec: 29,544 declarations; 93,680 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0.12%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-06 03:37:17.594
+!MESSAGE Indexed 'Ej2_uart' (99 sources, 208 headers) in 17.3 sec: 29,547 declarations; 93,737 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0.12%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-06 03:37:30.343
+!MESSAGE Indexed 'Ej0_blinky' (99 sources, 208 headers) in 12.7 sec: 29,545 declarations; 93,673 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0.12%)
+!SESSION 2023-11-06 03:44:49.230 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-11-06 03:45:19.316
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-11-06 03:45:19.332
+!MESSAGE Log4j2 initialized with config file /home/igpollitzer/repos/PdM_workspace/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-11-06 03:45:37.429
+!MESSAGE Started RMI Server, listening on port 41337
