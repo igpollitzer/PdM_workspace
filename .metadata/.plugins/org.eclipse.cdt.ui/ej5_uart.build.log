@@ -1,0 +1,885 @@
+13:19:55 **** Build of configuration Debug for project ej5_uart ****
+make -j8 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o"
+arm-none-eabi-gcc "../Drivers/API/Src/API_debounce.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/API/Src/API_debounce.d" -MT"Drivers/API/Src/API_debounce.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/API/Src/API_debounce.o"
+arm-none-eabi-gcc "../Drivers/API/Src/API_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/API/Src/API_uart.d" -MT"Drivers/API/Src/API_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/API/Src/API_uart.o"
+arm-none-eabi-gcc "../Drivers/API/Src/Api_delay.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/API/Src/Api_delay.d" -MT"Drivers/API/Src/Api_delay.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/API/Src/Api_delay.o"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f439zitx.d" -MT"Core/Startup/startup_stm32f439zitx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Startup/startup_stm32f439zitx.o" "../Core/Startup/startup_stm32f439zitx.s"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:31,
+                 from ../Core/Inc/stm32f4xx_hal_conf.h:275,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:28,
+                 from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h:6728:1: error: unknown type name 'HAL_StatusTypeDef'
+ 6728 | HAL_StatusTypeDef HAL_RCCEx_PeriphCLKConfig(RCC_PeriphCLKInitTypeDef  *PeriphClkInit);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h:6740:1: error: unknown type name 'HAL_StatusTypeDef'
+ 6740 | HAL_StatusTypeDef HAL_RCCEx_EnablePLLI2S(RCC_PLLI2SInitTypeDef  *PLLI2SInit);
+      | ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h:6741:1: error: unknown type name 'HAL_StatusTypeDef'
+ 6741 | HAL_StatusTypeDef HAL_RCCEx_DisablePLLI2S(void);
+      | ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h:6744:1: error: unknown type name 'HAL_StatusTypeDef'
+ 6744 | HAL_StatusTypeDef HAL_RCCEx_EnablePLLSAI(RCC_PLLSAIInitTypeDef  *PLLSAIInit);
+      | ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h:6745:1: error: unknown type name 'HAL_StatusTypeDef'
+ 6745 | HAL_StatusTypeDef HAL_RCCEx_DisablePLLSAI(void);
+      | ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:275,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:28,
+                 from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:1245:1: error: unknown type name 'HAL_StatusTypeDef'
+ 1245 | HAL_StatusTypeDef HAL_RCC_DeInit(void);
+      | ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:1246:1: error: unknown type name 'HAL_StatusTypeDef'
+ 1246 | HAL_StatusTypeDef HAL_RCC_OscConfig(RCC_OscInitTypeDef *RCC_OscInitStruct);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:1247:1: error: unknown type name 'HAL_StatusTypeDef'
+ 1247 | HAL_StatusTypeDef HAL_RCC_ClockConfig(RCC_ClkInitTypeDef *RCC_ClkInitStruct, uint32_t FLatency);
+      | ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:279,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:28,
+                 from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:237:1: error: unknown type name 'HAL_StatusTypeDef'
+  237 | HAL_StatusTypeDef HAL_GPIO_LockPin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+      | ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:283,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:28,
+                 from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:326:1: error: unknown type name 'HAL_StatusTypeDef'
+  326 | HAL_StatusTypeDef HAL_EXTI_SetConfigLine(EXTI_HandleTypeDef *hexti, EXTI_ConfigTypeDef *pExtiConfig);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:327:1: error: unknown type name 'HAL_StatusTypeDef'
+  327 | HAL_StatusTypeDef HAL_EXTI_GetConfigLine(EXTI_HandleTypeDef *hexti, EXTI_ConfigTypeDef *pExtiConfig);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:328:1: error: unknown type name 'HAL_StatusTypeDef'
+  328 | HAL_StatusTypeDef HAL_EXTI_ClearConfigLine(EXTI_HandleTypeDef *hexti);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:329:1: error: unknown type name 'HAL_StatusTypeDef'
+  329 | HAL_StatusTypeDef HAL_EXTI_RegisterCallback(EXTI_HandleTypeDef *hexti, EXTI_CallbackIDTypeDef CallbackID, void (*pPendingCbfn)(void));
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:330:1: error: unknown type name 'HAL_StatusTypeDef'
+  330 | HAL_StatusTypeDef HAL_EXTI_GetHandle(EXTI_HandleTypeDef *hexti, uint32_t ExtiLine);
+      | ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:28,
+                 from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:144:3: error: unknown type name 'HAL_LockTypeDef'
+  144 |   HAL_LockTypeDef            Lock;                                                             /*!< DMA locking object                     */
+      |   ^~~~~~~~~~~~~~~
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:639,
+                 from ../Core/Inc/stm32f4xx_hal_conf.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:28,
+                 from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h:69:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+   69 | HAL_StatusTypeDef HAL_DMAEx_MultiBufferStart(DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t SecondMemAddress, uint32_t DataLength);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:639,
+                 from ../Core/Inc/stm32f4xx_hal_conf.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:28,
+                 from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h:70:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+   70 | HAL_StatusTypeDef HAL_DMAEx_MultiBufferStart_IT(DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t SecondMemAddress, uint32_t DataLength);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h:71:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+   71 | HAL_StatusTypeDef HAL_DMAEx_ChangeMemory(DMA_HandleTypeDef *hdma, uint32_t Address, HAL_DMA_MemoryTypeDef memory);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:28,
+                 from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:652:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  652 | HAL_StatusTypeDef HAL_DMA_Init(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:653:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  653 | HAL_StatusTypeDef HAL_DMA_DeInit(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:662:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  662 | HAL_StatusTypeDef HAL_DMA_Start (DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t DataLength);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:663:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  663 | HAL_StatusTypeDef HAL_DMA_Start_IT(DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t DataLength);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:664:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  664 | HAL_StatusTypeDef HAL_DMA_Abort(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:665:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  665 | HAL_StatusTypeDef HAL_DMA_Abort_IT(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:666:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  666 | HAL_StatusTypeDef HAL_DMA_PollForTransfer(DMA_HandleTypeDef *hdma, HAL_DMA_LevelCompleteTypeDef CompleteLevel, uint32_t Timeout);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:28,
+                 from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:668:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  668 | HAL_StatusTypeDef HAL_DMA_CleanCallbacks(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:669:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  669 | HAL_StatusTypeDef HAL_DMA_RegisterCallback(DMA_HandleTypeDef *hdma, HAL_DMA_CallbackIDTypeDef CallbackID, void (* pCallback)(DMA_HandleTypeDef *_hdma));
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:670:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  670 | HAL_StatusTypeDef HAL_DMA_UnRegisterCallback(DMA_HandleTypeDef *hdma, HAL_DMA_CallbackIDTypeDef CallbackID);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:327,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:28,
+                 from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2009:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2009 | HAL_StatusTypeDef HAL_ETH_Init(ETH_HandleTypeDef *heth);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2010:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2010 | HAL_StatusTypeDef HAL_ETH_DeInit(ETH_HandleTypeDef *heth);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2029:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2029 | HAL_StatusTypeDef HAL_ETH_Start(ETH_HandleTypeDef *heth);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2030:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2030 | HAL_StatusTypeDef HAL_ETH_Start_IT(ETH_HandleTypeDef *heth);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2031:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2031 | HAL_StatusTypeDef HAL_ETH_Stop(ETH_HandleTypeDef *heth);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2032:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2032 | HAL_StatusTypeDef HAL_ETH_Stop_IT(ETH_HandleTypeDef *heth);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2034:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2034 | HAL_StatusTypeDef HAL_ETH_ReadData(ETH_HandleTypeDef *heth, void **pAppBuff);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2035:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2035 | HAL_StatusTypeDef HAL_ETH_RegisterRxAllocateCallback(ETH_HandleTypeDef *heth,
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2037:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2037 | HAL_StatusTypeDef HAL_ETH_UnRegisterRxAllocateCallback(ETH_HandleTypeDef *heth);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2038:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2038 | HAL_StatusTypeDef HAL_ETH_RegisterRxLinkCallback(ETH_HandleTypeDef *heth, pETH_rxLinkCallbackTypeDef rxLinkCallback);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2039:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2039 | HAL_StatusTypeDef HAL_ETH_UnRegisterRxLinkCallback(ETH_HandleTypeDef *heth);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2040:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2040 | HAL_StatusTypeDef HAL_ETH_GetRxDataErrorCode(ETH_HandleTypeDef *heth, uint32_t *pErrorCode);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2041:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2041 | HAL_StatusTypeDef HAL_ETH_RegisterTxFreeCallback(ETH_HandleTypeDef *heth, pETH_txFreeCallbackTypeDef txFreeCallback);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2042:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2042 | HAL_StatusTypeDef HAL_ETH_UnRegisterTxFreeCallback(ETH_HandleTypeDef *heth);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2043:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2043 | HAL_StatusTypeDef HAL_ETH_ReleaseTxPacket(ETH_HandleTypeDef *heth);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2059:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2059 | HAL_StatusTypeDef HAL_ETH_Transmit(ETH_HandleTypeDef *heth, ETH_TxPacketConfig *pTxConfig, uint32_t Timeout);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2060:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2060 | HAL_StatusTypeDef HAL_ETH_Transmit_IT(ETH_HandleTypeDef *heth, ETH_TxPacketConfig *pTxConfig);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2062:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2062 | HAL_StatusTypeDef HAL_ETH_WritePHYRegister(ETH_HandleTypeDef *heth, uint32_t PHYAddr, uint32_t PHYReg,
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2064:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2064 | HAL_StatusTypeDef HAL_ETH_ReadPHYRegister(ETH_HandleTypeDef *heth, uint32_t PHYAddr, uint32_t PHYReg,
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2086:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2086 | HAL_StatusTypeDef HAL_ETH_GetMACConfig(ETH_HandleTypeDef *heth, ETH_MACConfigTypeDef *macconf);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2087:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2087 | HAL_StatusTypeDef HAL_ETH_GetDMAConfig(ETH_HandleTypeDef *heth, ETH_DMAConfigTypeDef *dmaconf);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2088:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2088 | HAL_StatusTypeDef HAL_ETH_SetMACConfig(ETH_HandleTypeDef *heth, ETH_MACConfigTypeDef *macconf);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2089:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2089 | HAL_StatusTypeDef HAL_ETH_SetDMAConfig(ETH_HandleTypeDef *heth, ETH_DMAConfigTypeDef *dmaconf);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2097:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2097 | HAL_StatusTypeDef HAL_ETH_GetMACFilterConfig(ETH_HandleTypeDef *heth, ETH_MACFilterConfigTypeDef *pFilterConfig);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2098:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2098 | HAL_StatusTypeDef HAL_ETH_SetMACFilterConfig(ETH_HandleTypeDef *heth, ETH_MACFilterConfigTypeDef *pFilterConfig);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2099:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2099 | HAL_StatusTypeDef HAL_ETH_SetHashTable(ETH_HandleTypeDef *heth, uint32_t *pHashTable);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2100:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2100 | HAL_StatusTypeDef HAL_ETH_SetSourceMACAddrMatch(ETH_HandleTypeDef *heth, uint32_t AddrNbr, uint8_t *pMACAddr);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:2105:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+ 2105 | HAL_StatusTypeDef HAL_ETH_SetWakeUpFilter(ETH_HandleTypeDef *heth, uint32_t *pFilter, uint32_t Count);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:335,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:28,
+                 from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:70:3: error: unknown type name 'HAL_LockTypeDef'
+   70 |   HAL_LockTypeDef             Lock;               /* FLASH locking object                */
+      |   ^~~~~~~~~~~~~~~
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:295,
+                 from ../Core/Inc/stm32f4xx_hal_conf.h:335,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:28,
+                 from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:725:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  725 | HAL_StatusTypeDef HAL_FLASHEx_Erase(FLASH_EraseInitTypeDef *pEraseInit, uint32_t *SectorError);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:726:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  726 | HAL_StatusTypeDef HAL_FLASHEx_Erase_IT(FLASH_EraseInitTypeDef *pEraseInit);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:727:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  727 | HAL_StatusTypeDef HAL_FLASHEx_OBProgram(FLASH_OBProgramInitTypeDef *pOBInit);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:735:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  735 | HAL_StatusTypeDef HAL_FLASHEx_AdvOBProgram (FLASH_AdvOBProgramInitTypeDef *pAdvOBInit);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:737:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  737 | HAL_StatusTypeDef HAL_FLASHEx_OB_SelectPCROP(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:738:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  738 | HAL_StatusTypeDef HAL_FLASHEx_OB_DeSelectPCROP(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:335,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:28,
+                 from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:306:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  306 | HAL_StatusTypeDef HAL_FLASH_Program(uint32_t TypeProgram, uint32_t Address, uint64_t Data);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:307:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  307 | HAL_StatusTypeDef HAL_FLASH_Program_IT(uint32_t TypeProgram, uint32_t Address, uint64_t Data);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:321:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  321 | HAL_StatusTypeDef HAL_FLASH_Unlock(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:322:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  322 | HAL_StatusTypeDef HAL_FLASH_Lock(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:323:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  323 | HAL_StatusTypeDef HAL_FLASH_OB_Unlock(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:324:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  324 | HAL_StatusTypeDef HAL_FLASH_OB_Lock(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:326:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  326 | HAL_StatusTypeDef HAL_FLASH_OB_Launch(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:336:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  336 | HAL_StatusTypeDef FLASH_WaitForLastOperation(uint32_t Timeout);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:272,
+                 from ../Core/Inc/stm32f4xx_hal_conf.h:383,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:28,
+                 from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:205:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  205 | HAL_StatusTypeDef HAL_PWREx_EnableBkUpReg(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:206:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  206 | HAL_StatusTypeDef HAL_PWREx_DisableBkUpReg(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:208:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  208 | HAL_StatusTypeDef HAL_PWREx_ControlVoltageScaling(uint32_t VoltageScaling);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:222:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  222 | HAL_StatusTypeDef HAL_PWREx_EnableOverDrive(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:223:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  223 | HAL_StatusTypeDef HAL_PWREx_DisableOverDrive(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:224:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  224 | HAL_StatusTypeDef HAL_PWREx_EnterUnderDriveSTOPMode(uint32_t Regulator, uint8_t STOPEntry);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:28,
+                 from ../Core/Inc/stm32f4xx_hal_conf.h:431,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:28,
+                 from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:457:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  457 | HAL_StatusTypeDef USB_CoreInit(USB_OTG_GlobalTypeDef *USBx, USB_OTG_CfgTypeDef cfg);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:458:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  458 | HAL_StatusTypeDef USB_DevInit(USB_OTG_GlobalTypeDef *USBx, USB_OTG_CfgTypeDef cfg);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:459:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  459 | HAL_StatusTypeDef USB_EnableGlobalInt(USB_OTG_GlobalTypeDef *USBx);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:460:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  460 | HAL_StatusTypeDef USB_DisableGlobalInt(USB_OTG_GlobalTypeDef *USBx);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:461:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  461 | HAL_StatusTypeDef USB_SetTurnaroundTime(USB_OTG_GlobalTypeDef *USBx, uint32_t hclk, uint8_t speed);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:462:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  462 | HAL_StatusTypeDef USB_SetCurrentMode(USB_OTG_GlobalTypeDef *USBx, USB_OTG_ModeTypeDef mode);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:463:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  463 | HAL_StatusTypeDef USB_SetDevSpeed(USB_OTG_GlobalTypeDef *USBx, uint8_t speed);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:464:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  464 | HAL_StatusTypeDef USB_FlushRxFifo(USB_OTG_GlobalTypeDef *USBx);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:465:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  465 | HAL_StatusTypeDef USB_FlushTxFifo(USB_OTG_GlobalTypeDef *USBx, uint32_t num);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:466:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  466 | HAL_StatusTypeDef USB_ActivateEndpoint(USB_OTG_GlobalTypeDef *USBx, USB_OTG_EPTypeDef *ep);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:467:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  467 | HAL_StatusTypeDef USB_DeactivateEndpoint(USB_OTG_GlobalTypeDef *USBx, USB_OTG_EPTypeDef *ep);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:468:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  468 | HAL_StatusTypeDef USB_ActivateDedicatedEndpoint(USB_OTG_GlobalTypeDef *USBx, USB_OTG_EPTypeDef *ep);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:469:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  469 | HAL_StatusTypeDef USB_DeactivateDedicatedEndpoint(USB_OTG_GlobalTypeDef *USBx, USB_OTG_EPTypeDef *ep);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:470:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  470 | HAL_StatusTypeDef USB_EPStartXfer(USB_OTG_GlobalTypeDef *USBx, USB_OTG_EPTypeDef *ep, uint8_t dma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:471:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  471 | HAL_StatusTypeDef USB_EP0StartXfer(USB_OTG_GlobalTypeDef *USBx, USB_OTG_EPTypeDef *ep, uint8_t dma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:472:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  472 | HAL_StatusTypeDef USB_WritePacket(USB_OTG_GlobalTypeDef *USBx, uint8_t *src,
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:476:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  476 | HAL_StatusTypeDef USB_EPSetStall(USB_OTG_GlobalTypeDef *USBx, USB_OTG_EPTypeDef *ep);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:477:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  477 | HAL_StatusTypeDef USB_EPClearStall(USB_OTG_GlobalTypeDef *USBx, USB_OTG_EPTypeDef *ep);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:478:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  478 | HAL_StatusTypeDef USB_EPStopXfer(USB_OTG_GlobalTypeDef *USBx, USB_OTG_EPTypeDef *ep);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:479:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  479 | HAL_StatusTypeDef USB_SetDevAddress(USB_OTG_GlobalTypeDef *USBx, uint8_t address);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:480:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  480 | HAL_StatusTypeDef USB_DevConnect(USB_OTG_GlobalTypeDef *USBx);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:481:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  481 | HAL_StatusTypeDef USB_DevDisconnect(USB_OTG_GlobalTypeDef *USBx);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:482:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  482 | HAL_StatusTypeDef USB_StopDevice(USB_OTG_GlobalTypeDef *USBx);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:483:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  483 | HAL_StatusTypeDef USB_ActivateSetup(USB_OTG_GlobalTypeDef *USBx);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:484:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  484 | HAL_StatusTypeDef USB_EP0_OutStart(USB_OTG_GlobalTypeDef *USBx, uint8_t dma, uint8_t *psetup);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:494:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  494 | HAL_StatusTypeDef USB_HostInit(USB_OTG_GlobalTypeDef *USBx, USB_OTG_CfgTypeDef cfg);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:495:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  495 | HAL_StatusTypeDef USB_InitFSLSPClkSel(USB_OTG_GlobalTypeDef *USBx, uint8_t freq);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:496:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  496 | HAL_StatusTypeDef USB_ResetPort(USB_OTG_GlobalTypeDef *USBx);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:497:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  497 | HAL_StatusTypeDef USB_DriveVbus(USB_OTG_GlobalTypeDef *USBx, uint8_t state);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:500:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  500 | HAL_StatusTypeDef USB_HC_Init(USB_OTG_GlobalTypeDef *USBx, uint8_t ch_num,
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:503:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  503 | HAL_StatusTypeDef USB_HC_StartXfer(USB_OTG_GlobalTypeDef *USBx,
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:507:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  507 | HAL_StatusTypeDef USB_HC_Halt(USB_OTG_GlobalTypeDef *USBx, uint8_t hc_num);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:508:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  508 | HAL_StatusTypeDef USB_DoPing(USB_OTG_GlobalTypeDef *USBx, uint8_t ch_num);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:509:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  509 | HAL_StatusTypeDef USB_StopHost(USB_OTG_GlobalTypeDef *USBx);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:510:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  510 | HAL_StatusTypeDef USB_ActivateRemoteWakeup(USB_OTG_GlobalTypeDef *USBx);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:511:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_ETH_StateTypeDef'?
+  511 | HAL_StatusTypeDef USB_DeActivateRemoteWakeup(USB_OTG_GlobalTypeDef *USBx);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_ETH_StateTypeDef
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:431,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:28,
+                 from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:103:3: error: unknown type name 'HAL_LockTypeDef'
+  103 |   HAL_LockTypeDef         Lock;        /*!< PCD peripheral status             */
+      |   ^~~~~~~~~~~~~~~
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:145,
+                 from ../Core/Inc/stm32f4xx_hal_conf.h:431,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:28,
+                 from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h:50:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'PCD_StateTypeDef'?
+   50 | HAL_StatusTypeDef HAL_PCDEx_SetTxFiFo(PCD_HandleTypeDef *hpcd, uint8_t fifo, uint16_t size);
+      | ^~~~~~~~~~~~~~~~~
+      | PCD_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h:51:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'PCD_StateTypeDef'?
+   51 | HAL_StatusTypeDef HAL_PCDEx_SetRxFiFo(PCD_HandleTypeDef *hpcd, uint16_t size);
+      | ^~~~~~~~~~~~~~~~~
+      | PCD_StateTypeDef
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:431,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:28,
+                 from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:248:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'PCD_StateTypeDef'?
+  248 | HAL_StatusTypeDef HAL_PCD_Init(PCD_HandleTypeDef *hpcd);
+      | ^~~~~~~~~~~~~~~~~
+      | PCD_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:249:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'PCD_StateTypeDef'?
+  249 | HAL_StatusTypeDef HAL_PCD_DeInit(PCD_HandleTypeDef *hpcd);
+      | ^~~~~~~~~~~~~~~~~
+      | PCD_StateTypeDef
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:431,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:28,
+                 from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:333:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'PCD_StateTypeDef'?
+  333 | HAL_StatusTypeDef HAL_PCD_Start(PCD_HandleTypeDef *hpcd);
+      | ^~~~~~~~~~~~~~~~~
+      | PCD_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:334:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'PCD_StateTypeDef'?
+  334 | HAL_StatusTypeDef HAL_PCD_Stop(PCD_HandleTypeDef *hpcd);
+      | ^~~~~~~~~~~~~~~~~
+      | PCD_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:358:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'PCD_StateTypeDef'?
+  358 | HAL_StatusTypeDef HAL_PCD_DevConnect(PCD_HandleTypeDef *hpcd);
+      | ^~~~~~~~~~~~~~~~~
+      | PCD_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:359:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'PCD_StateTypeDef'?
+  359 | HAL_StatusTypeDef HAL_PCD_DevDisconnect(PCD_HandleTypeDef *hpcd);
+      | ^~~~~~~~~~~~~~~~~
+      | PCD_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:360:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'PCD_StateTypeDef'?
+  360 | HAL_StatusTypeDef HAL_PCD_SetAddress(PCD_HandleTypeDef *hpcd, uint8_t address);
+      | ^~~~~~~~~~~~~~~~~
+      | PCD_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:361:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'PCD_StateTypeDef'?
+  361 | HAL_StatusTypeDef HAL_PCD_EP_Open(PCD_HandleTypeDef *hpcd, uint8_t ep_addr, uint16_t ep_mps, uint8_t ep_type);
+      | ^~~~~~~~~~~~~~~~~
+      | PCD_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:362:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'PCD_StateTypeDef'?
+  362 | HAL_StatusTypeDef HAL_PCD_EP_Close(PCD_HandleTypeDef *hpcd, uint8_t ep_addr);
+      | ^~~~~~~~~~~~~~~~~
+      | PCD_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:363:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'PCD_StateTypeDef'?
+  363 | HAL_StatusTypeDef HAL_PCD_EP_Receive(PCD_HandleTypeDef *hpcd, uint8_t ep_addr, uint8_t *pBuf, uint32_t len);
+      | ^~~~~~~~~~~~~~~~~
+      | PCD_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:364:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'PCD_StateTypeDef'?
+  364 | HAL_StatusTypeDef HAL_PCD_EP_Transmit(PCD_HandleTypeDef *hpcd, uint8_t ep_addr, uint8_t *pBuf, uint32_t len);
+      | ^~~~~~~~~~~~~~~~~
+      | PCD_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:365:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'PCD_StateTypeDef'?
+  365 | HAL_StatusTypeDef HAL_PCD_EP_SetStall(PCD_HandleTypeDef *hpcd, uint8_t ep_addr);
+      | ^~~~~~~~~~~~~~~~~
+      | PCD_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:366:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'PCD_StateTypeDef'?
+  366 | HAL_StatusTypeDef HAL_PCD_EP_ClrStall(PCD_HandleTypeDef *hpcd, uint8_t ep_addr);
+      | ^~~~~~~~~~~~~~~~~
+      | PCD_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:367:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'PCD_StateTypeDef'?
+  367 | HAL_StatusTypeDef HAL_PCD_EP_Flush(PCD_HandleTypeDef *hpcd, uint8_t ep_addr);
+      | ^~~~~~~~~~~~~~~~~
+      | PCD_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:368:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'PCD_StateTypeDef'?
+  368 | HAL_StatusTypeDef HAL_PCD_EP_Abort(PCD_HandleTypeDef *hpcd, uint8_t ep_addr);
+      | ^~~~~~~~~~~~~~~~~
+      | PCD_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:369:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'PCD_StateTypeDef'?
+  369 | HAL_StatusTypeDef HAL_PCD_ActivateRemoteWakeup(PCD_HandleTypeDef *hpcd);
+      | ^~~~~~~~~~~~~~~~~
+      | PCD_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:370:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'PCD_StateTypeDef'?
+  370 | HAL_StatusTypeDef HAL_PCD_DeActivateRemoteWakeup(PCD_HandleTypeDef *hpcd);
+      | ^~~~~~~~~~~~~~~~~
+      | PCD_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:371:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'PCD_StateTypeDef'?
+  371 | HAL_StatusTypeDef HAL_PCD_SetTestMode(PCD_HandleTypeDef *hpcd, uint8_t testmode);
+      | ^~~~~~~~~~~~~~~~~
+      | PCD_StateTypeDef
+In file included from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:28,
+                 from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:219:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'PCD_StateTypeDef'?
+  219 | HAL_StatusTypeDef HAL_Init(void);
+      | ^~~~~~~~~~~~~~~~~
+      | PCD_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:220:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'PCD_StateTypeDef'?
+  220 | HAL_StatusTypeDef HAL_DeInit(void);
+      | ^~~~~~~~~~~~~~~~~
+      | PCD_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:223:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'PCD_StateTypeDef'?
+  223 | HAL_StatusTypeDef HAL_InitTick (uint32_t TickPriority);
+      | ^~~~~~~~~~~~~~~~~
+      | PCD_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:236:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'PCD_StateTypeDef'?
+  236 | HAL_StatusTypeDef HAL_SetTickFreq(HAL_TickFreqTypeDef Freq);
+      | ^~~~~~~~~~~~~~~~~
+      | PCD_StateTypeDef
+In file included from ../Drivers/API/Src/API_uart.c:8:
+/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:14:1: error: unknown type name 'bool_t'; did you mean 'bool'?
+   14 | bool_t uartInit();
+      | ^~~~~~
+      | bool
+../Drivers/API/Src/API_uart.c:28:8: error: unknown type name 'bool_t'
+   28 | static bool_t uartInit(void){
+      |        ^~~~~~
+../Drivers/API/Src/API_uart.c:28:15: error: static declaration of 'uartInit' follows non-static declaration
+   28 | static bool_t uartInit(void){
+      |               ^~~~~~~~
+In file included from ../Drivers/API/Src/API_uart.c:8:
+/home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:14:8: note: previous declaration of 'uartInit' with type 'int()'
+   14 | bool_t uartInit();
+      |        ^~~~~~~~
+../Drivers/API/Src/API_uart.c: In function 'uartInit':
+../Drivers/API/Src/API_uart.c:29:5: error: unknown type name 'bool_t'; did you mean 'bool'?
+   29 |     bool_t output = false;
+      |     ^~~~~~
+      |     bool
+../Drivers/API/Src/API_uart.c:40:40: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+   40 |         HAL_UART_Transmit(&uart3, uart3.Instance, sizeof(uart3.Instance));
+      |                                   ~~~~~^~~~~~~~~
+      |                                        |
+      |                                        USART_TypeDef *
+In file included from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'USART_TypeDef *'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Drivers/API/Src/API_uart.c:40:9: error: too few arguments to function 'HAL_UART_Transmit'
+   40 |         HAL_UART_Transmit(&uart3, uart3.Instance, sizeof(uart3.Instance));
+      |         ^~~~~~~~~~~~~~~~~
+In file included from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:19: note: declared here
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                   ^~~~~~~~~~~~~~~~~
+../Drivers/API/Src/API_uart.c:41:45: warning: passing argument 2 of 'HAL_UART_Transmit' makes pointer from integer without a cast [-Wint-conversion]
+   41 |         HAL_UART_Transmit(&uart3, uart3.Init.BaudRate, sizeof(uart3.Init.BaudRate));
+      |                                   ~~~~~~~~~~^~~~~~~~~
+      |                                             |
+      |                                             uint32_t {aka long unsigned int}
+In file included from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'uint32_t' {aka 'long unsigned int'}
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Drivers/API/Src/API_uart.c:41:9: error: too few arguments to function 'HAL_UART_Transmit'
+   41 |         HAL_UART_Transmit(&uart3, uart3.Init.BaudRate, sizeof(uart3.Init.BaudRate));
+      |         ^~~~~~~~~~~~~~~~~
+In file included from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:19: note: declared here
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                   ^~~~~~~~~~~~~~~~~
+../Drivers/API/Src/API_uart.c:42:45: warning: passing argument 2 of 'HAL_UART_Transmit' makes pointer from integer without a cast [-Wint-conversion]
+   42 |         HAL_UART_Transmit(&uart3, uart3.Init.WordLength, sizeof(uart3.Init.WordLength));
+      |                                   ~~~~~~~~~~^~~~~~~~~~~
+      |                                             |
+      |                                             uint32_t {aka long unsigned int}
+In file included from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'uint32_t' {aka 'long unsigned int'}
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Drivers/API/Src/API_uart.c:42:9: error: too few arguments to function 'HAL_UART_Transmit'
+   42 |         HAL_UART_Transmit(&uart3, uart3.Init.WordLength, sizeof(uart3.Init.WordLength));
+      |         ^~~~~~~~~~~~~~~~~
+In file included from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:19: note: declared here
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                   ^~~~~~~~~~~~~~~~~
+../Drivers/API/Src/API_uart.c:43:45: warning: passing argument 2 of 'HAL_UART_Transmit' makes pointer from integer without a cast [-Wint-conversion]
+   43 |         HAL_UART_Transmit(&uart3, uart3.Init.StopBits, sizeof(uart3.Init.StopBits));
+      |                                   ~~~~~~~~~~^~~~~~~~~
+      |                                             |
+      |                                             uint32_t {aka long unsigned int}
+In file included from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'uint32_t' {aka 'long unsigned int'}
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Drivers/API/Src/API_uart.c:43:9: error: too few arguments to function 'HAL_UART_Transmit'
+   43 |         HAL_UART_Transmit(&uart3, uart3.Init.StopBits, sizeof(uart3.Init.StopBits));
+      |         ^~~~~~~~~~~~~~~~~
+In file included from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:19: note: declared here
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                   ^~~~~~~~~~~~~~~~~
+../Drivers/API/Src/API_uart.c:44:45: warning: passing argument 2 of 'HAL_UART_Transmit' makes pointer from integer without a cast [-Wint-conversion]
+   44 |         HAL_UART_Transmit(&uart3, uart3.Init.Parity, sizeof(uart3.Init.Parity));
+      |                                   ~~~~~~~~~~^~~~~~~
+      |                                             |
+      |                                             uint32_t {aka long unsigned int}
+In file included from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'uint32_t' {aka 'long unsigned int'}
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Drivers/API/Src/API_uart.c:44:9: error: too few arguments to function 'HAL_UART_Transmit'
+   44 |         HAL_UART_Transmit(&uart3, uart3.Init.Parity, sizeof(uart3.Init.Parity));
+      |         ^~~~~~~~~~~~~~~~~
+In file included from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:19: note: declared here
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                   ^~~~~~~~~~~~~~~~~
+../Drivers/API/Src/API_uart.c:45:45: warning: passing argument 2 of 'HAL_UART_Transmit' makes pointer from integer without a cast [-Wint-conversion]
+   45 |         HAL_UART_Transmit(&uart3, uart3.Init.Mode, sizeof(uart3.Init.Mode));
+      |                                   ~~~~~~~~~~^~~~~
+      |                                             |
+      |                                             uint32_t {aka long unsigned int}
+In file included from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'uint32_t' {aka 'long unsigned int'}
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Drivers/API/Src/API_uart.c:45:9: error: too few arguments to function 'HAL_UART_Transmit'
+   45 |         HAL_UART_Transmit(&uart3, uart3.Init.Mode, sizeof(uart3.Init.Mode));
+      |         ^~~~~~~~~~~~~~~~~
+In file included from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:19: note: declared here
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                   ^~~~~~~~~~~~~~~~~
+../Drivers/API/Src/API_uart.c:46:45: warning: passing argument 2 of 'HAL_UART_Transmit' makes pointer from integer without a cast [-Wint-conversion]
+   46 |         HAL_UART_Transmit(&uart3, uart3.Init.HwFlowCtl, sizeof(uart3.Init.HwFlowCtl));
+      |                                   ~~~~~~~~~~^~~~~~~~~~
+      |                                             |
+      |                                             uint32_t {aka long unsigned int}
+In file included from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'uint32_t' {aka 'long unsigned int'}
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Drivers/API/Src/API_uart.c:46:9: error: too few arguments to function 'HAL_UART_Transmit'
+   46 |         HAL_UART_Transmit(&uart3, uart3.Init.HwFlowCtl, sizeof(uart3.Init.HwFlowCtl));
+      |         ^~~~~~~~~~~~~~~~~
+In file included from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:19: note: declared here
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                   ^~~~~~~~~~~~~~~~~
+../Drivers/API/Src/API_uart.c:47:45: warning: passing argument 2 of 'HAL_UART_Transmit' makes pointer from integer without a cast [-Wint-conversion]
+   47 |         HAL_UART_Transmit(&uart3, uart3.Init.OverSampling, sizeof(uart3.Instance));
+      |                                   ~~~~~~~~~~^~~~~~~~~~~~~
+      |                                             |
+      |                                             uint32_t {aka long unsigned int}
+In file included from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'uint32_t' {aka 'long unsigned int'}
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Drivers/API/Src/API_uart.c:47:9: error: too few arguments to function 'HAL_UART_Transmit'
+   47 |         HAL_UART_Transmit(&uart3, uart3.Init.OverSampling, sizeof(uart3.Instance));
+      |         ^~~~~~~~~~~~~~~~~
+In file included from /home/igpollitzer/repos/PdM_workspace/ej5_uart/Drivers/API/Inc/API_uart.h:12,
+                 from ../Drivers/API/Src/API_uart.c:8:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:19: note: declared here
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                   ^~~~~~~~~~~~~~~~~
+At top level:
+../Drivers/API/Src/API_uart.c:28:15: warning: 'uartInit' defined but not used [-Wunused-function]
+   28 | static bool_t uartInit(void){
+      |               ^~~~~~~~
+make: *** [Drivers/API/Src/subdir.mk:25: Drivers/API/Src/API_uart.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+13:19:59 Build Failed. 151 errors, 9 warnings. (took 3s.491ms)
+

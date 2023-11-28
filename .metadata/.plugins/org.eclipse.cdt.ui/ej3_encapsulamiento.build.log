@@ -1,10 +1,10 @@
-03:02:21 **** Incremental Build of configuration Debug for project ej3_encapsulamiento ****
-make -j4 all 
+13:47:08 **** Incremental Build of configuration Debug for project ej3_encapsulamiento ****
+make -j8 all 
 arm-none-eabi-size   ej3_encapsulamiento.elf 
    text	   data	    bss	    dec	    hex	filename
   12880	     20	   3492	  16392	   4008	ej3_encapsulamiento.elf
 Finished building: default.size.stdout
  
 
-03:02:22 Build Finished. 0 errors, 0 warnings. (took 703ms)
+13:47:08 Build Finished. 0 errors, 0 warnings. (took 170ms)
 
