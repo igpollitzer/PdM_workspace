@@ -35,34 +35,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := ej4_debounce
+BUILD_ARTIFACT_NAME := ej5_uart
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-ej4_debounce.elf \
+ej5_uart.elf \
 
 MAP_FILES += \
-ej4_debounce.map \
+ej5_uart.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-ej4_debounce.list \
+ej5_uart.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: ej4_debounce.elf secondary-outputs
+main-build: ej5_uart.elf secondary-outputs
 
 # Tool invocations
-ej4_debounce.elf ej4_debounce.map: $(OBJS) $(USER_OBJS) /home/igpollitzer/repos/PdM_workspace/ej4_debounce/STM32F439ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "ej4_debounce.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/igpollitzer/repos/PdM_workspace/ej4_debounce/STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ej4_debounce.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+ej5_uart.elf ej5_uart.map: $(OBJS) $(USER_OBJS) /home/igpollitzer/repos/PdM_workspace_test/ej5_uart/STM32F439ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "ej5_uart.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/igpollitzer/repos/PdM_workspace_test/ej5_uart/STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ej5_uart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -71,14 +71,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-ej4_debounce.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "ej4_debounce.list"
+ej5_uart.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "ej5_uart.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) default.size.stdout ej4_debounce.elf ej4_debounce.list ej4_debounce.map
+	-$(RM) default.size.stdout ej5_uart.elf ej5_uart.list ej5_uart.map
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)

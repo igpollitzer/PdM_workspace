@@ -14,5 +14,6 @@
 void debounceFSM_init();		// Inicializa la maquina de estados
 void debounceFSM_update();  	// Verifica la situacion de la maquina y actua en caso de necesidad
 bool_t readKey();               // Retorna verdadero o falso, si se oprimio el boton.
+bool_t wasKeyReleased();        // Retorna verdadero o falso, si se solto el boton.
 
 #endif /* API_INC_API_DEBOUNCE_H_ */

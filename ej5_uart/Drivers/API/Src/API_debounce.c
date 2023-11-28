@@ -22,7 +22,10 @@ static uint32_t espera = 40;
 static delay_t rebote = {.startTime = 0,
                         .duration = 0,
                         .running = false};
+
+// Booleanos de disparo y soltado, para saber cuando occurieron eventos
 static bool_t disparo = false;
+static bool_t soltado = false;
 
 // debounceFSM_init inicializa la maquina de estados, como en su declaracion
 
@@ -70,6 +73,7 @@ void debounceFSM_update(){
     		}
     		else if(HAL_GPIO_ReadPin(USER_Btn_GPIO_Port, USER_Btn_Pin) == GPIO_PIN_RESET){
 	    		estado = BUTTON_UP;
+	    		soltado = true;
     		}
 		}
 	default:
@@ -82,6 +86,17 @@ void debounceFSM_update(){
 bool_t readKey(){
 	if(disparo == true){
 		disparo = false;
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+
+// La funcion wasKeyReleased es como readKey, pero para detectar si se solto el boton.
+bool_t wasKeyReleased(){
+	if(soltado == true){
+		soltado = false;
 		return true;
 	}
 	else{

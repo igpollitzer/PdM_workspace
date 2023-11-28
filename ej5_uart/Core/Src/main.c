@@ -24,6 +24,7 @@
 /* USER CODE BEGIN Includes */
 #include "API_delay.h"
 #include "API_debounce.h"
+#include "API_uart.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -33,7 +34,10 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define MESSAGE_BUTTON_PRESSED "Boton presionado.\n\r"
+#define MESSAGE_BUTTON_PRESSED_LENGTH 19
+#define MESSAGE_BUTTON_RELEASED "Boton soltado.\n\r"
+#define MESSAGE_BUTTON_RELEASED_LENGTH 16
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -49,7 +53,7 @@ ETH_DMADescTypeDef  DMATxDscrTab[ETH_TX_DESC_CNT]; /* Ethernet Tx DMA Descriptor
 
 ETH_HandleTypeDef heth;
 
-UART_HandleTypeDef huart3;
+// UART_HandleTypeDef huart3;
 
 PCD_HandleTypeDef hpcd_USB_OTG_FS;
 
@@ -61,7 +65,7 @@ PCD_HandleTypeDef hpcd_USB_OTG_FS;
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_ETH_Init(void);
-static void MX_USART3_UART_Init(void);
+//static void MX_USART3_UART_Init(void);
 static void MX_USB_OTG_FS_PCD_Init(void);
 /* USER CODE BEGIN PFP */
 
@@ -79,7 +83,7 @@ static void MX_USB_OTG_FS_PCD_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
+  bool_t uart_status;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -101,7 +105,8 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_ETH_Init();
-  MX_USART3_UART_Init();
+//  MX_USART3_UART_Init();
+  uart_status = uartInit();
   MX_USB_OTG_FS_PCD_Init();
   /* USER CODE BEGIN 2 */
 
@@ -132,7 +137,11 @@ int main(void)
 
       // Si se apreto el boton, cambiamos el indice del arreglo, y actualizamos el timer del delay
       if(readKey()){
-        	indice++;
+          indice++;
+          uartSendStringSize(MESSAGE_BUTTON_PRESSED,MESSAGE_BUTTON_PRESSED_LENGTH);
+      }
+      if(wasKeyReleased()){
+    	  uartSendStringSize(MESSAGE_BUTTON_RELEASED,MESSAGE_BUTTON_RELEASED_LENGTH);
       }
       delayWrite(&timer, tiempos[indice%2]>>1);
   }
@@ -240,8 +249,9 @@ static void MX_ETH_Init(void)
   * @param None
   * @retval None
   */
-static void MX_USART3_UART_Init(void)
-{
+
+//static void MX_USART3_UART_Init(void)
+//{
 
   /* USER CODE BEGIN USART3_Init 0 */
 
@@ -250,23 +260,23 @@ static void MX_USART3_UART_Init(void)
   /* USER CODE BEGIN USART3_Init 1 */
 
   /* USER CODE END USART3_Init 1 */
-  huart3.Instance = USART3;
-  huart3.Init.BaudRate = 115200;
-  huart3.Init.WordLength = UART_WORDLENGTH_8B;
-  huart3.Init.StopBits = UART_STOPBITS_1;
-  huart3.Init.Parity = UART_PARITY_NONE;
-  huart3.Init.Mode = UART_MODE_TX_RX;
-  huart3.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-  huart3.Init.OverSampling = UART_OVERSAMPLING_16;
-  if (HAL_UART_Init(&huart3) != HAL_OK)
-  {
-    Error_Handler();
-  }
+//  huart3.Instance = USART3;
+//  huart3.Init.BaudRate = 115200;
+//  huart3.Init.WordLength = UART_WORDLENGTH_8B;
+//  huart3.Init.StopBits = UART_STOPBITS_1;
+// huart3.Init.Parity = UART_PARITY_NONE;
+//  huart3.Init.Mode = UART_MODE_TX_RX;
+//  huart3.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+//  huart3.Init.OverSampling = UART_OVERSAMPLING_16;
+//  if (HAL_UART_Init(&huart3) != HAL_OK)
+//  {
+//    Error_Handler();
+//  }
   /* USER CODE BEGIN USART3_Init 2 */
 
   /* USER CODE END USART3_Init 2 */
 
-}
+//}
 
 /**
   * @brief USB_OTG_FS Initialization Function
