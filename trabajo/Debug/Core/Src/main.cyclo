@@ -1,0 +1,15 @@
+../Core/Src/main.c:93:5:main	16
+../Core/Src/main.c:254:6:SystemClock_Config	3
+../Core/Src/main.c:300:13:MX_ETH_Init	2
+../Core/Src/main.c:349:13:MX_I2C2_Init	4
+../Core/Src/main.c:393:6:lcdSendCommand	1
+../Core/Src/main.c:405:6:lcdInit	1
+../Core/Src/main.c:424:6:lcdSendText	1
+../Core/Src/main.c:436:6:lcdSendString	2
+../Core/Src/main.c:442:6:lcdLineOne	1
+../Core/Src/main.c:446:6:lcdLineTwo	1
+../Core/Src/main.c:455:13:MX_USART2_UART_Init	2
+../Core/Src/main.c:488:13:MX_USART3_UART_Init	2
+../Core/Src/main.c:521:13:MX_USB_OTG_FS_PCD_Init	2
+../Core/Src/main.c:556:13:MX_GPIO_Init	1
+../Core/Src/main.c:615:6:Error_Handler	1

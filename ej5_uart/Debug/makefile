@@ -61,8 +61,8 @@ all: main-build
 main-build: ej5_uart.elf secondary-outputs
 
 # Tool invocations
-ej5_uart.elf ej5_uart.map: $(OBJS) $(USER_OBJS) /home/igpollitzer/repos/PdM_workspace_test/ej5_uart/STM32F439ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "ej5_uart.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/igpollitzer/repos/PdM_workspace_test/ej5_uart/STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ej5_uart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+ej5_uart.elf ej5_uart.map: $(OBJS) $(USER_OBJS) /home/igpollitzer/repos/PdM_workspace/ej5_uart/STM32F439ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "ej5_uart.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/igpollitzer/repos/PdM_workspace/ej5_uart/STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ej5_uart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
