@@ -23,6 +23,8 @@
 #include "API_lcd.h"
 #include "API_delay.h"
 #include "API_debounce.h"
+#include "API_gps.h"
+#include "API_i2c.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -36,8 +38,6 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define MAX_NMEA_LENGTH 82
-#define LCD_ADDRESS 0x4E
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -74,12 +74,7 @@ static void MX_I2C2_Init(void);
 static void MX_USART2_UART_Init(void);
 
 /* USER CODE BEGIN PFP */
-void lcdSendCommand(char);
-void lcdSendText(char);
-void lcdInit(void);
-void lcdSendString(char*, uint8_t);
-void lcdLineOne(void);
-void lcdLineTwo(void);
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -92,152 +87,73 @@ void lcdLineTwo(void);
   */
 int main(void)
 {
-  /* USER CODE BEGIN 1 */
-  /* USER CODE END 1 */
+	/* USER CODE BEGIN 1 */
+	/* USER CODE END 1 */
 
-  /* MCU Configuration--------------------------------------------------------*/
+	/* MCU Configuration--------------------------------------------------------*/
 
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
+	/* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+	HAL_Init();
 
-  /* USER CODE BEGIN Init */
+	/* USER CODE BEGIN Init */
 
-  /* USER CODE END Init */
+	/* USER CODE END Init */
 
-  /* Configure the system clock */
-  SystemClock_Config();
+	/* Configure the system clock */
+	SystemClock_Config();
 
-  /* USER CODE BEGIN SysInit */
+	/* USER CODE BEGIN SysInit */
 
-  /* USER CODE END SysInit */
+	/* USER CODE END SysInit */
 
-  /* Initialize all configured peripherals */
-  MX_GPIO_Init();
-  MX_ETH_Init();
-  MX_USART3_UART_Init();
-  MX_USB_OTG_FS_PCD_Init();
-  MX_I2C2_Init();
-  MX_USART2_UART_Init();
-  /* USER CODE BEGIN 2 */
-  char gpsData[1] = "";
-  char parseLine[MAX_NMEA_LENGTH] = "";
-  lcdInit ();
-  char latitude[] =   "LAT:    .       ";
-  char longitude[] =  "LON:    .       ";
-  char satellites[] = "Satellites:     ";
-  char error[] =      "Error:  .  x25m ";
-  char time[] =       "Time:    :      ";
-  char date[] =       "Date:    /  /   ";
-  enum lcdScreen{gpsPos, gpsSat, gpsDat};
-  enum lcdScreen gpsScreen = gpsSat;
-  /* USER CODE END 2 */
+	/* Initialize all configured peripherals */
+	MX_GPIO_Init();
+	MX_ETH_Init();
+	MX_USART3_UART_Init();
+	MX_USB_OTG_FS_PCD_Init();
+	MX_I2C2_Init();
+	MX_USART2_UART_Init();
+	/* USER CODE BEGIN 2 */
+	lcdInit ();
+	debounceFSM_init();
+	enum lcdScreen{gpsPos, gpsSat, gpsDat};
+	enum lcdScreen gpsScreen = gpsPos;
+	/* USER CODE END 2 */
 
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-  	  HAL_UART_Receive(&huart2, ((uint8_t*) gpsData), 1, HAL_MAX_DELAY);
-//  	  HAL_UART_Transmit(&huart3, ((uint8_t*) gpsData), 1, HAL_MAX_DELAY);
-
-  	  if (gpsData[0] == '$'){
-  		  uint8_t i = 0;
-  		  while(gpsData[0] != '\n'){
-  			  parseLine[i] = gpsData[0];
-  			  HAL_UART_Receive(&huart2, ((uint8_t*) gpsData), 1, HAL_MAX_DELAY);
-  			  i++;
-  			  // Con esto me aseguro de tener una condición de salida
-  			  if (i > MAX_NMEA_LENGTH){
-  				  break;
-  			  }
-  		  }
-  		if (parseLine[4] == 'G'){
-  		    latitude[6] = parseLine[17];
-		    latitude[7] = parseLine[18];
-			latitude[9] = parseLine[19];
-			latitude[10] = parseLine[20];
-			latitude[11] = parseLine[22];
-			latitude[12] = parseLine[23];
-			latitude[13] = parseLine[24];
-			latitude[15] = parseLine[28];
-			longitude[5] = parseLine[30];
-			longitude[6] = parseLine[31];
-			longitude[7] = parseLine[32];
-			longitude[9] = parseLine[33];
-			longitude[10] = parseLine[34];
-			longitude[11] = parseLine[36];
-			longitude[12] = parseLine[37];
-			longitude[13] = parseLine[38];
-			longitude[15] = parseLine[42];
-			satellites[13] = parseLine[46];
-			satellites[14] = parseLine[47];
-			error[7] = parseLine[49];
-			error[9] = parseLine[51];
-			error[10] = parseLine[52];
-
-			HAL_UART_Transmit(&huart3, ((uint8_t*) latitude), 16, HAL_MAX_DELAY);
-			HAL_UART_Transmit(&huart3, ((uint8_t*) "\n\r"), 2, HAL_MAX_DELAY);
-			HAL_UART_Transmit(&huart3, ((uint8_t*) longitude), 16, HAL_MAX_DELAY);
-			HAL_UART_Transmit(&huart3, ((uint8_t*) "\n\r"), 2, HAL_MAX_DELAY);
-			HAL_UART_Transmit(&huart3, ((uint8_t*) satellites), 16, HAL_MAX_DELAY);
-			HAL_UART_Transmit(&huart3, ((uint8_t*) "\n\r"), 2, HAL_MAX_DELAY);
-			HAL_UART_Transmit(&huart3, ((uint8_t*) error), 16, HAL_MAX_DELAY);
-			HAL_UART_Transmit(&huart3, ((uint8_t*) "\n\r"), 2, HAL_MAX_DELAY);
-			if (gpsScreen == gpsPos){
-				lcdLineOne();
-				lcdSendString(latitude,16);
-				lcdLineTwo();
-				lcdSendString(longitude,16);
-			}
-			if (gpsScreen == gpsSat){
-				lcdLineOne();
-				lcdSendString(satellites,16);
-				lcdLineTwo();
-				lcdSendString(error,16);
-			}
-  		}
-  		if (parseLine[4] == 'M'){
-			time[7] = parseLine[7];
-			time[8] = parseLine[8];
-			time[10] = parseLine[9];
-			time[11] = parseLine[10];
-			time[13] = parseLine[11];
-			time[14] = parseLine[12];
-			date[7] = parseLine[53];
-			date[8] = parseLine[54];
-			date[10] = parseLine[55];
-			date[11] = parseLine[56];
-			date[13] = parseLine[57];
-			date[14] = parseLine[58];
-
-			HAL_UART_Transmit(&huart3, ((uint8_t*) time), 16, HAL_MAX_DELAY);
-			HAL_UART_Transmit(&huart3, ((uint8_t*) "\n\r"), 2, HAL_MAX_DELAY);
-			HAL_UART_Transmit(&huart3, ((uint8_t*) date), 16, HAL_MAX_DELAY);
-			HAL_UART_Transmit(&huart3, ((uint8_t*) "\n\r"), 2, HAL_MAX_DELAY);
-			if (gpsScreen == gpsDat){
-				lcdLineOne();
-				lcdSendString(date,16);
-				lcdLineTwo();
-				lcdSendString(time,16);
-			}
-  		}
-
- 	  }
+	/* Infinite loop */
+	/* USER CODE BEGIN WHILE */
+	while (1)
+	{
+		debounceFSM_update();
+		gpsUpdate();
   	  switch(gpsScreen){
   	  case gpsPos:
-  		  if (isButtonReleased()){
+		  lcdLineOne();
+		  lcdSendString(gpsLatitude(),LCD_LENGTH);
+		  lcdLineTwo();
+		  lcdSendString(gpsLongitude(),LCD_LENGTH);
+  		  if (readKey()){
   			  gpsScreen = gpsSat;
-  			  HAL_UART_Transmit(&huart3, ((uint8_t*) "Paso a Satelites\n\r"), 18, HAL_MAX_DELAY);
   		  }
+  		  break;
   	  case gpsSat:
-  		  if (isButtonReleased()){
+		  lcdLineOne();
+		  lcdSendString(gpsSatellites(),LCD_LENGTH);
+		  lcdLineTwo();
+		  lcdSendString(gpsError(),LCD_LENGTH);
+  		  if (readKey()){
   			  gpsScreen = gpsDat;
-  			  HAL_UART_Transmit(&huart3, ((uint8_t*) "Paso a FechaHora\n\r"), 18, HAL_MAX_DELAY);
   		  }
+  		  break;
   	  case gpsDat:
-  		  if (isButtonReleased()){
+		  lcdLineOne();
+		  lcdSendString(gpsDate(),LCD_LENGTH);
+		  lcdLineTwo();
+		  lcdSendString(gpsTime(),LCD_LENGTH);
+  		  if (readKey()){
   			  gpsScreen = gpsPos;
-  			  HAL_UART_Transmit(&huart3, ((uint8_t*) "Paso a Posicion\n\r"), 17, HAL_MAX_DELAY);
   		  }
+  		  break;
   	  }
 
     /* USER CODE END WHILE */
@@ -388,63 +304,6 @@ static void MX_I2C2_Init(void)
 
   /* USER CODE END I2C2_Init 2 */
 
-}
-
-void lcdSendCommand(char command){
-  char data_msb, data_lsb;
-	uint8_t data[4];
-	data_msb = (command & 0xf0);
-	data_lsb = ((command << 4) & 0xf0);
-	data[0] = data_msb | 0x0C;  // Subo el Enable
-	data[1] = data_msb | 0x08;  // Bajo el Enable, para que lea la mitad alta
-	data[2] = data_lsb | 0x0C;  // Subo el Enable
-	data[3] = data_lsb | 0x08;  // Bajo el Enable, para que lea la mitad baja
-	HAL_I2C_Master_Transmit(&hi2c2, LCD_ADDRESS,(uint8_t*) data, 4, 100);
-}
-
-void lcdInit(void){
-	// Los delays son mayores que los pedidos en la hoja de datos.
-	HAL_Delay(50);
-	lcdSendCommand(0x30); // Function set
-	HAL_Delay(10);
-	lcdSendCommand(0x28); // Function set: 2 lineas, caracteres 8x5
-	HAL_Delay(10);
-	lcdSendCommand(0x28); // Function set
-	HAL_Delay(10);
-	lcdSendCommand(0x0C); // Display ON/OFF control: Display encendido
-	HAL_Delay(10);
-	lcdSendCommand(0x01); // Display Clear
-	HAL_Delay(10);
-	lcdSendCommand(0x06); // Entry Mode Set: De derecha a izquierda
-	HAL_Delay(10);
-	lcdSendCommand(0x02); // Return Home
-	HAL_Delay(10);
-}
-
-void lcdSendText(char text){
-	char data_msb, data_lsb;
-	uint8_t data[4];
-	data_msb = (text & 0xf0);
-	data_lsb = ((text << 4) & 0xf0);
-	data[0] = data_msb | 0x0D;  // Subo el Enable
-	data[1] = data_msb | 0x09;  // Bajo el Enable, para que lea la mitad alta
-	data[2] = data_lsb | 0x0D;  // Subo el Enable
-	data[3] = data_lsb | 0x09;  // Bajo el Enable, para que lea la mitad baja
-	HAL_I2C_Master_Transmit(&hi2c2, LCD_ADDRESS,(uint8_t*) data, 4, 100);
-}
-
-void lcdSendString(char* text, uint8_t length){
-    for (uint8_t i = 0 ; i < length ; i++){
-    	lcdSendText(text[i]);
-    }
-}
-
-void lcdLineOne(void){
-	lcdSendCommand(0x80);
-}
-
-void lcdLineTwo(void){
-	lcdSendCommand(0xC0);
 }
 
 /**

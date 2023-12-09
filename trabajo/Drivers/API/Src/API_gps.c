@@ -5,95 +5,184 @@
  *      Author: igpollitzer
  */
 
-/*
-static struct gpsData{
-	char Latitude[] =   "LAT:    .       ";
-	char Longitude[] =  "LON:    .       ";
-	char Satellites[] = "Satellites:     ";
-	char Error[] =      "Error:  .  x25m ";
-	char Time[] =       "Time:    :      ";
-	char Date[] =       "Date:    /  /   ";
-};
+#include"API_gps.h"
 
-void gpsParse(char* parseLine){
-	if (parseLine[4] == 'G'){
-		if (parseline[19] == ','){
-			gpsData.Latitude[6] = 'X';
-			gpsData.Latitude[7] = 'X';
-			gpsData.Latitude[9] = 'X';
-			gpsData.Latitude[10] = 'X';
-			gpsData.Latitude[11] = 'X';
-			gpsData.Latitude[12] = 'X';
-			gpsData.Latitude[13] = 'X';
-			gpsData.Longitude[5] = 'X';
-			gpsData.Longitude[6] = 'X';
-			gpsData.Longitude[7] = 'X';
-			gpsData.Longitude[9] = 'X';
-			gpsData.Longitude[10] = 'X';
-			gpsData.Longitude[11] = 'X';
-			gpsData.Longitude[12] = 'X';
-			gpsData.Longitude[13] = 'X';
-			gpsData.Longitude[15] = 'X';
-			gpsData.Satellites[13] = 'X';
-			gpsData.Satellites[14] = 'X';
-			gpsData.Error[7] = 'X';
-			gpsData.Error[9] = 'X';
-			gpsData.Error[10] = 'X';
-		}
-		else{
-			gpsData.Latitude[6] = parseLine[17];
-			gpsData.Latitude[7] = parseLine[18];
-			gpsData.Latitude[9] = parseLine[19];
-			gpsData.Latitude[10] = parseLine[20];
-			gpsData.Latitude[11] = parseLine[22];
-			gpsData.Latitude[12] = parseLine[23];
-			gpsData.Latitude[13] = parseLine[24];
-			gpsData.Longitude[5] = parseLine[30];
-			gpsData.Longitude[6] = parseLine[31];
-			gpsData.Longitude[7] = parseLine[32];
-			gpsData.Longitude[9] = parseLine[33];
-			gpsData.Longitude[10] = parseLine[34];
-			gpsData.Longitude[11] = parseLine[36];
-			gpsData.Longitude[12] = parseLine[37];
-			gpsData.Longitude[13] = parseLine[38];
-			gpsData.Longitude[15] = parseLine[42];
-			gpsData.Satellites[13] = parseLine[46];
-			gpsData.Satellites[14] = parseLine[47];
-			gpsData.Error[7] = parseLine[49];
-			gpsData.Error[9] = parseLine[51];
-			gpsData.Error[10] = parseLine[52];
-		}
-	}
-	if(parseLine[4] == 'M'){
-		if (parseline[19] == ','){
-			gpsData.Time[7] = 'X';
-			gpsData.Time[8] = 'X';
-			gpsData.Time[10] = 'X';
-			gpsData.Time[11] = 'X';
-			gpsData.Time[13] = 'X';
-			gpsData.Time[14] = 'X';
-			gpsData.Date[7] = 'X';
-			gpsData.Date[8] = 'X';
-			gpsData.Date[10] = 'X';
-			gpsData.Date[11] = 'X';
-			gpsData.Date[13] = 'X';
-			gpsData.Date[14] = 'X';
-		}
-		else{
-			gpsData.Time[7] = parseLine[7];
-			gpsData.Time[8] = parseLine[8];
-			gpsData.Time[10] = parseLine[9];
-			gpsData.Time[11] = parseLine[10];
-			gpsData.Time[13] = parseLine[11];
-			gpsData.Time[14] = parseLine[12];
-			gpsData.Date[7] = parseLine[53];
-			gpsData.Date[8] = parseLine[54];
-			gpsData.Date[10] = parseLine[55];
-			gpsData.Date[11] = parseLine[56];
-			gpsData.Date[13] = parseLine[57];
-			gpsData.Date[14] = parseLine[58];
+uint8_t i = 0;
+char gpsData[1] = "";
+
+char parseLine[MAX_NMEA_LENGTH] = "";
+char latitude[] = "LAT:            ";
+char longitude[] = "LON:            ";
+char satellites[] = "Satellites:     ";
+char error[] = "Error:          ";
+char time[] = "Time:           ";
+char date[] = "Date:           ";
+
+
+void gpsUpdate(void){
+    // Este while 1 es para que agrupe todas las lineas que manda el GPS. La ultima es la de GLL.
+	while(1){
+		HAL_UART_Receive(&huart2, ((uint8_t*) gpsData), 1, HAL_MAX_DELAY);
+		/*
+		 * El parseo de la informacion del gps es el siguiente:
+		 * Las lineas empiezan con un $ y terminan en /n
+		 * La informacion la tomo de las lineas de GPRMC y GPGGA
+		 * La linea de GLL es la ultima. Uso esa para salir.
+		 */
+
+		if (gpsData[0] == '$'){
+			i = 0;
+			while(gpsData[0] != '\n'){
+				parseLine[i] = gpsData[0];
+				HAL_UART_Receive(&huart2, ((uint8_t*) gpsData), 1, HAL_MAX_DELAY);
+				i++;
+			}
+			parseLine[i] = gpsData[0];
+			if(parseLine[3] == 'R' && parseLine[4] == 'M' && parseLine[5] == 'C'){
+				parseRMC();
+			}
+			if(parseLine[3] == 'G' && parseLine[4] == 'G' && parseLine[5] == 'A'){
+				parseGGA();
+			}
+			if(parseLine[3] == 'G' && parseLine[4] == 'L' && parseLine[5] == 'L'){
+				break;
+			}
+
 		}
 	}
 }
 
-*/
+void parseRMC(void){
+//	if (parseLine[20] == ','){
+	if (i < 50){
+		date[7] = ' ';
+		date[8] = ' ';
+		date[9] = 'N';
+		date[10] = 'O';
+		date[11] = ' ';
+		date[12] = ' ';
+		date[13] = ' ';
+		date[14] = ' ';
+		time[7] = ' ';
+		time[8] = 'D';
+		time[9] = 'A';
+		time[10] = 'T';
+		time[11] = 'A';
+		time[12] = ' ';
+		time[13] = ' ';
+		time[14] = ' ';
+	}
+	else{
+		time[7] = parseLine[7];
+		time[8] = parseLine[8];
+		time[9] = ':';
+		time[10] = parseLine[9];
+		time[11] = parseLine[10];
+		time[12] = ':';
+		time[13] = parseLine[11];
+		time[14] = parseLine[12];
+		date[7] = parseLine[53];
+		date[8] = parseLine[54];
+		date[9] = '/';
+		date[10] = parseLine[55];
+		date[11] = parseLine[56];
+		date[12] = '/';
+		date[13] = parseLine[57];
+		date[14] = parseLine[58];
+	}
+}
+
+void parseGGA(void){
+//	if (parseLine[18] == ','){
+	if (i < 50){
+		latitude[6] = ' ';
+		latitude[7] = ' ';
+		latitude[8] = ' ';
+		latitude[9] = 'N';
+		latitude[10] = 'O';
+		latitude[11] = ' ';
+		latitude[12] = ' ';
+		latitude[13] = ' ';
+		latitude[15] = ' ';
+		longitude[5] = ' ';
+		longitude[6] = ' ';
+		longitude[7] = ' ';
+		longitude[8] = 'D';
+		longitude[9] = 'A';
+		longitude[10] = 'T';
+		longitude[11] = 'A';
+		longitude[12] = ' ';
+		longitude[13] = ' ';
+		longitude[15] = ' ';
+		satellites[13] = 'N';
+		satellites[14] = 'O';
+		error[7] = ' ';
+		error[8] = ' ';
+		error[9] = ' ';
+		error[10] = ' ';
+		error[11] = 'D';
+		error[12] = 'A';
+		error[13] = 'T';
+		error[14] = 'A';
+	}
+	else{
+		latitude[6] = parseLine[17];
+		latitude[7] = parseLine[18];
+		latitude[8] = '.';
+		latitude[9] = parseLine[19];
+		latitude[10] = parseLine[20];
+		latitude[11] = parseLine[22];
+		latitude[12] = parseLine[23];
+		latitude[13] = parseLine[24];
+		latitude[15] = parseLine[28];
+		if (parseLine[30] == '1'){
+			longitude[5] = parseLine[30];
+		}
+		else{
+			longitude[5] = ' ';
+		}
+		longitude[6] = parseLine[31];
+		longitude[7] = parseLine[32];
+		longitude[8] = '.';
+		longitude[9] = parseLine[33];
+		longitude[10] = parseLine[34];
+		longitude[11] = parseLine[36];
+		longitude[12] = parseLine[37];
+		longitude[13] = parseLine[38];
+		longitude[15] = parseLine[42];
+		satellites[13] = parseLine[46];
+		satellites[14] = parseLine[47];
+		error[7] = parseLine[49];
+		error[8] = '.';
+		error[9] = parseLine[51];
+		error[10] = parseLine[52];
+		error[11] = 'x';
+		error[12] = '2';
+		error[13] = '5';
+		error[14] = 'm';
+	}
+}
+
+char* gpsLatitude(void){
+	return latitude;
+}
+
+char* gpsLongitude(void){
+	return longitude;
+}
+
+char* gpsSatellites(void){
+	return satellites;
+}
+
+char* gpsError(void){
+	return error;
+}
+
+char* gpsTime(void){
+	return time;
+}
+
+char* gpsDate(){
+	return date;
+}

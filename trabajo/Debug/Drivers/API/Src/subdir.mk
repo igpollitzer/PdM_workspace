@@ -7,18 +7,21 @@
 C_SRCS += \
 ../Drivers/API/Src/API_debounce.c \
 ../Drivers/API/Src/API_gps.c \
+../Drivers/API/Src/API_i2c.c \
 ../Drivers/API/Src/API_lcd.c \
 ../Drivers/API/Src/Api_delay.c 
 
 OBJS += \
 ./Drivers/API/Src/API_debounce.o \
 ./Drivers/API/Src/API_gps.o \
+./Drivers/API/Src/API_i2c.o \
 ./Drivers/API/Src/API_lcd.o \
 ./Drivers/API/Src/Api_delay.o 
 
 C_DEPS += \
 ./Drivers/API/Src/API_debounce.d \
 ./Drivers/API/Src/API_gps.d \
+./Drivers/API/Src/API_i2c.d \
 ./Drivers/API/Src/API_lcd.d \
 ./Drivers/API/Src/Api_delay.d 
 
@@ -30,7 +33,7 @@ Drivers/API/Src/%.o Drivers/API/Src/%.su Drivers/API/Src/%.cyclo: ../Drivers/API
 clean: clean-Drivers-2f-API-2f-Src
 
 clean-Drivers-2f-API-2f-Src:
-	-$(RM) ./Drivers/API/Src/API_debounce.cyclo ./Drivers/API/Src/API_debounce.d ./Drivers/API/Src/API_debounce.o ./Drivers/API/Src/API_debounce.su ./Drivers/API/Src/API_gps.cyclo ./Drivers/API/Src/API_gps.d ./Drivers/API/Src/API_gps.o ./Drivers/API/Src/API_gps.su ./Drivers/API/Src/API_lcd.cyclo ./Drivers/API/Src/API_lcd.d ./Drivers/API/Src/API_lcd.o ./Drivers/API/Src/API_lcd.su ./Drivers/API/Src/Api_delay.cyclo ./Drivers/API/Src/Api_delay.d ./Drivers/API/Src/Api_delay.o ./Drivers/API/Src/Api_delay.su
+	-$(RM) ./Drivers/API/Src/API_debounce.cyclo ./Drivers/API/Src/API_debounce.d ./Drivers/API/Src/API_debounce.o ./Drivers/API/Src/API_debounce.su ./Drivers/API/Src/API_gps.cyclo ./Drivers/API/Src/API_gps.d ./Drivers/API/Src/API_gps.o ./Drivers/API/Src/API_gps.su ./Drivers/API/Src/API_i2c.cyclo ./Drivers/API/Src/API_i2c.d ./Drivers/API/Src/API_i2c.o ./Drivers/API/Src/API_i2c.su ./Drivers/API/Src/API_lcd.cyclo ./Drivers/API/Src/API_lcd.d ./Drivers/API/Src/API_lcd.o ./Drivers/API/Src/API_lcd.su ./Drivers/API/Src/Api_delay.cyclo ./Drivers/API/Src/Api_delay.d ./Drivers/API/Src/Api_delay.o ./Drivers/API/Src/Api_delay.su
 
 .PHONY: clean-Drivers-2f-API-2f-Src
 
